@@ -53,7 +53,12 @@ const questions = [
 ];
 
 // function to write README file
-function writeToFile(fileName, data) {
+function writeToFile(fileName, data,) {
+    fs.writeFile(fileName, data, function (error) {
+        if (error) {
+            return console.log(error);
+        } console.log('success!');
+    })
 }
 
 // function to initialize program
@@ -61,7 +66,7 @@ function init() {
     inquirer.prompt(questions)
     .then(function(response){
         const markdown = generateMarkdown(response);
-        writeToFile(`${data.title}.md`, markdown);
+        writeToFile(`${response.title}.md`, markdown);
     })
     
 
