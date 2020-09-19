@@ -1,12 +1,9 @@
 const fs = require("fs");
 const inquirer = require('inquirer');
 const generateMarkdown = require('./generateMarkdown');
-const util = require('util');
 
-const writeFileAsync = util.promisify(fs.writeFile);
 
 // array of questions for user
-
 const questions = [
     {
         type: "input",
@@ -62,6 +59,10 @@ function writeToFile(fileName, data) {
 // function to initialize program
 function init() {
     inquirer.prompt(questions)
+    .then(function(response){
+        const markdown = generateMarkdown(response);
+        writeToFile(`${data.title}.md`, markdown);
+    })
     
 
 }
