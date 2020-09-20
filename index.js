@@ -3,6 +3,7 @@ const inquirer = require('inquirer');
 const generateMarkdown = require('./generateMarkdown');
 
 
+
 // array of questions for user
 const questions = [
     {
@@ -34,7 +35,7 @@ const questions = [
         type: "list",
         name: "license",
         message: "Choose an open source license:",
-        choices: ["MIT License" , "Apache License 2.0" , "Mozilla Public License 2.0", 'GNU General Public License version 3']
+        choices: [ "MIT" , "Apache" , "Mozzila" , "GNU" ]
       },
       {
         type: "input",
@@ -69,8 +70,6 @@ function init() {
         const markdown = generateMarkdown(response);
         writeToFile(`${response.title}.md`, markdown);
     })
-    
-
 }
 
 // function call to initialize program
