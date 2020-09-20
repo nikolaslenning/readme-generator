@@ -31,9 +31,10 @@ const questions = [
         message: "Any instructions or examples for usage?"
       },
       {
-        type: "input",
+        type: "list",
         name: "license",
-        message: "License"
+        message: "Choose an open source license:",
+        choices: ["MIT License" , "Apache License 2.0" , "Mozilla Public License 2.0", 'GNU General Public License version 3']
       },
       {
         type: "input",
