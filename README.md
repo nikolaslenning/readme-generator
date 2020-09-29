@@ -29,7 +29,7 @@ Screenshot demostrating the readme generated from the information provided in th
 ## Credits
 [Inquirer Package](https://www.npmjs.com/package/inquirer) was used to ask the user questions, take that input, and dynamically create a readme based on user answers. 
 
-A live link to my [Readme Generator](https://nikolaslenning.github.io/readme-generator/) is hosted on Github pages.
+A  link to my [Readme Generator](https://github.com/nikolaslenning/readme-generator/) is hosted on Github pages.
 
 This application was authored by [Nikolas Lenning](https://github.com/nikolaslenning).
 
